@@ -1,13 +1,14 @@
 .signup__container {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 180px;
+  overflow: hidden;
 }
 
 .signup-form {
   margin: 0 auto;
   padding: 40px;
-  width: fit-content;
-  border: 2px solid rgb(10, 143, 99);
+  width: 600px;
+  border: 2px solid rgb(180, 180, 180);
   border-radius: 2px;
 
   &__window {}
@@ -17,48 +18,41 @@
   &__btns {}
 }
 
-input {
-  border-color: rgb(10, 143, 99);
-}
 
 .signup-form__btns {
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
-
+  display: flex;
 }
 
-.signin-btn {
-  display: block;
-  margin: 0 auto;
-  border: 0;
-  font-weight: 700;
-  color: rgb(10, 143, 99);
-  background: transparent;
 
-  &:hover {
-    color: rgba(248, 248, 248, 0.658);
-    color: #fff;
-    background-color: rgba(233, 72, 8, 0.952);
-    border-radius: 8px;
-  }
-}
-
-.signup-btn {
-  display: block;
-  font-weight: 700;
-  margin: 0 auto;
-  border: 0;
-  margin-top: 8px;
-  color: rgb(10, 143, 99);
-  background: transparent;
-
-  &:hover {
-    color: xrgba(248, 248, 248, 0.658);
-    color: #fff;
-    background-color: rgba(233, 72, 8, 0.952);
-    border-radius: 8px;
-  }
-}
 
 .signup {
   padding: 10px;
+}
+
+.input-email {
+  margin-right: 20px;
+}
+
+input {
+  border-color: rgb(10, 143, 99);
+  border-radius: 4px;
+  padding: 8px;
+  display: inline;
+  width: 100%;
+
+  &:focus {
+    outline-color: #0a8f63;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 179, 0.25);
+    border-color: #0a8f63;
+    outline: none;
+  }
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
 }

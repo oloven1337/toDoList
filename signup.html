@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="./css/style.css">
   <title>Document</title>
 </head>
@@ -16,14 +16,17 @@
 
   <section class="signup">
     <div class="signup__container">
+      <h1>Регистрация</h1>
       <form class="signup-form">
         <div class="signup-form__window">
-          <input type="email" placeholder="Your email">
-          <input type="password" placeholder="Your password">
+          <label>Email</label>
+          <input class="input-email" type="email" placeholder="Your email">
+          <label style="margin-top: 12px;">Password</label>
+          <input class="input-pass" type="password" placeholder="Your password">
         </div>
         <div class="signup-form__btns">
-          <button class="signin-btn">Войти</button>
-          <button class="signup-btn">Зарегестрироваться</button>
+          <button class="button">Войти</button>
+          <button class="button">Зарегестрироваться</button>
         </div>
       </form>
     </div>
