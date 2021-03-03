@@ -17,6 +17,11 @@
   border: 2px solid rgb(180, 180, 180);
   border-radius: 2px;
 
+  &__window { 
+    margin-bottom: 30px;
+  }
+  
+
   &__window {}
 
   &__inner {}
@@ -26,13 +31,16 @@
 
 
 .signup-form__btns {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  display: flex;
+  display: inline;
 }
 
+.btn_signin {
+  position: relative;
+  left: 210px;
+}
 
+.btn_signup {
+}
 
 .signup {
   padding: 10px;

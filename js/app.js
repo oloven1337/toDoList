@@ -58,9 +58,3 @@ function createElement() {
     inputAddTask.style.outlineColor = 'red'
   }
 }
-
-///////////
-
-
-
-

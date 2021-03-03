@@ -1,18 +1,19 @@
+$mainColor: #08a652;
+
 .button {
   cursor: pointer;
   font-weight: 400;
-  border: 0;
   color: #fff;
-  border-color: #0a8f63;
-  background-color: #0a8f63;
+  border: 1px solid $mainColor;
+  background-color: $mainColor;
   border-radius: 8px;
   padding: 10px 30px;
 
   &:hover {
+    border: 1px solid $mainColor;
     transition: 0.4s;
-    color: xrgba(248, 248, 248, 0.658);
-    color: #fff;
-    background-color: rgba(233, 72, 8, 0.952);
+    color: $mainColor;
+    background-color: inherit;
     border-radius: 8px;
   }
 }
