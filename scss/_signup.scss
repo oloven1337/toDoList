@@ -1,7 +1,13 @@
-.signup__container {
+.signup {
+  display: flex;
+  justify-content: center;
+  // text-align: center;
+  // margin-top: 180px;
+  // overflow: hidden;
+}
+
+.signup-title {
   text-align: center;
-  margin-top: 180px;
-  overflow: hidden;
 }
 
 .signup-form {

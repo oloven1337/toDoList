@@ -1,7 +1,14 @@
-.signup__container {
+.signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signup-title {
   text-align: center;
-  margin-top: 180px;
-  overflow: hidden;
 }
 
 .signup-form {
@@ -73,14 +80,19 @@ label {
   border-radius: 8px;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.list-group {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.input_add-remove {
+  width: 50%;
 }
 
 li {
@@ -100,12 +112,6 @@ li:hover {
           box-shadow: 0 0 0 0.2rem rgba(0, 255, 179, 0.25);
 }
 
-.list-group {
-  width: 600px;
-  margin: 0 auto;
-  margin-top: 80px;
-}
-
 .list-group__items {
   padding: 0;
   margin: 0 auto;
@@ -114,51 +120,17 @@ li:hover {
 }
 
 .add-remove-item {
-  margin-top: 20px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.add-remove-item .add-list__item {
-  cursor: pointer;
-  font-weight: 700;
-  margin: 0 auto;
-  border: 0;
-  margin-top: 8px;
-  color: #fff;
-  border-color: #0a8f63;
-  background-color: #0a8f63;
-  border-radius: 8px;
-  padding: 6px;
-}
-
-.add-remove-item .add-list__item:hover {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  color: rgba(248, 248, 248, 0.658);
-  color: #fff;
-  background-color: rgba(233, 72, 8, 0.952);
-  border-radius: 8px;
-}
-
-.add-remove-item .remove-list__item {
-  cursor: pointer;
-  font-weight: 700;
-  margin: 0 auto;
-  margin-left: 20px;
-  border: 0;
-  margin-top: 8px;
-  color: #fff;
-  border-color: #0a8f63;
-  background-color: #0a8f63;
-  border-radius: 8px;
-  padding: 6px;
-}
-
-.add-remove-item .remove-list__item:hover {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  color: rgba(248, 248, 248, 0.658);
-  color: #fff;
-  background-color: rgba(233, 72, 8, 0.952);
-  border-radius: 8px;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=style.css.map */
