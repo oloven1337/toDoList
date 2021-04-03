@@ -19,6 +19,33 @@ deleteAllTasks.addEventListener('click', () => {
   document.querySelectorAll('.task_item').forEach((elem) => elem.remove())
 })
 
+// function spanEditTxt(span, li) {
+//   span.addEventListener('click', () => {
+
+//     if (!span.querySelector('input')) {
+//       let da = span.innerHTML
+//       let input = document.createElement('input')
+//       span.innerHTML = ''
+//       span.appendChild(input)
+//       input.value = da
+//       // span.remove()
+//       // li.appendChild(input)
+//       // console.log(li.children)
+//       // console.log(li)
+//       // li.innerHTML[0].appendChild('input')
+//     }
+//   })
+// }
+
+// function saveEdit(input, span) {
+//   input.addEventListener('click', () => {
+//     let da = input.value
+
+//     input.remove()
+//     span.innerHTML = 'da'
+//   })
+// }
+
 /////////// Functions
 
 function inputChange(input) {
@@ -41,7 +68,7 @@ function liAppendChild(li, span, spanDel) {
 }
 
 function createElement() {
-  if (!inputAddTask.value == '') {
+  if (inputAddTask.value !== '') {
     let li = document.createElement('li')
     let span = document.createElement('span')
     let spanDel = document.createElement('span')
@@ -50,6 +77,7 @@ function createElement() {
     liAppendChild(li, span, spanDel)
     inputChange(inputAddTask)
     spanDelAddEvents(spanDel, li)
+    // spanEditTxt(span, li)
   }
 
   else {
