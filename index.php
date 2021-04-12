@@ -1,0 +1,60 @@
+<?php
+session_start();
+$dbname = 'ToDoList';
+
+$con = mysqli_connect("localhost","root","", $dbname);
+
+if (mysqli_connect_errno())
+{
+	echo 'error connection ('.mysqli_connect_errno().'):';
+	exit();
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./scss/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <section class="list">
+      <div class="container">
+        <div class="list-group">
+          <form class="add-remove-item" onsubmit="return false;">
+            <div class="wrapper-menu">
+              <div class="wrapper-menu__input">
+                <input class="input_add-remove" type="text" />
+              </div>
+              <div class="wrapper-menu__buttons">
+                <button class="button add-item">Добавить задачу</button>
+                <button class="button remove-item">Удалить все задачи</button>
+              </div>
+            </div>
+          </form>
+          <ul class="list-group__items"></ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/app.js"></script>
+
+    <!-- < src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></>
+  < src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></>
+  < src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></> -->
+  </body>
+</html>
