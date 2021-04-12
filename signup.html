@@ -14,24 +14,18 @@
 
 <body>
 
-  <section class="signup">
-    <div class="signup__container">
-      <h1 class="signup-title">Регистрация</h1>
-      <form class="signup-form" action="./signup_action.php">
-        <div class="signup-form__window">
-          <label>Name</label>
-          <input class="input-email" placeholder="Your name">
-          <label style="margin-top: 12px;">Email</label>
-          <input class="input-email" type="email" placeholder="Your email">
-          <label style="margin-top: 12px;">Password</label>
-          <input class="input-pass" type="password" placeholder="Your password">
-        </div>
-        <div class="signup-form__btns">
-          <button class="button btn_signup">Зарегестрироваться</button>
-        </div>
-      </form>
-    </div>
-  </section>
+  <div class="container mregister">
+<div id="login">
+ <h1>Регистрация нового пользователя</h1>
+<form action="signup_action.php" id="registerform" method="post" name="registerform">
+ <p><label for="user_login">Логин<br>
+ <input class="input" id="name" name="name" size="16" type="text" required="all feelds required" value=""></label></p>
+<p><label for="user_pass">Пароль<br>
+<input class="input" id="password" name="password" size="16" type="password" required="all feelds required" required pattern="^[ 0-9]+$" value=""></label></p>
+<label for="user_pass"><small>(Только цифры)</small></small><br></label>
+<p><class="submit">
+<input class="button" id="register" name= "reg" type="submit" value="Подтвердить"></p>
+<a href= "login.html">Авторизация</a>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

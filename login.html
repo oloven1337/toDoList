@@ -14,22 +14,17 @@
 
 <body>
 
-  <section class="signup">
-    <div class="signup__container">
-      <h1 class="signup-title">Вход</h1>
-      <form class="signup-form" action="./login_action.php">
-        <div class="signup-form__window">
-          <label style="margin-top: 12px;">Email</label>
-          <input class="input-email" type="email" placeholder="Your email">
-          <label style="margin-top: 12px;">Password</label>
-          <input class="input-pass" type="password" placeholder="Your password">
-        </div>
-        <div class="signup-form__btns">
-        </div>
-        <button class="button btn_signin">Войти</button>
-      </form>
-    </div>
-  </section>
+ <div class="container mlogin">
+<div id="login">
+<h1>Авторизация пользователя</h1>
+<form action="login_action.php" id="loginform" method="post" name="loginform">
+<p><label for="user_login">Имя<br>
+<input class="input" id="username" name="username"size="16" type="text" value=""></label></p>
+<p><label for="user_pass">Пароль<br>
+<input class="input" id="password" name="password"size="16" type="password" required pattern="^[ 0-9]+$" value=""></label></p> 
+<p class="submit"><input class="button" name="login" type= "submit" value="Вход"></p>
+<a href= "registration.html">Регистрация<br></a>
+ <a href= "index.php">Главное меню<br><br></a>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
