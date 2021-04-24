@@ -1,7 +1,7 @@
 <?php
 $dbname = 'todolist';
 $login = $_POST['username'];
-$pass = $_POST['password'];;
+$pass = $_POST['password'];
 
 $con = mysqli_connect("localhost","root","", $dbname);
 
