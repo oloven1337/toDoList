@@ -1,14 +1,20 @@
 <?php
-session_start();
-$dbname = 'ToDoList';
+
+$dbname = 'todolist';
+
+
 
 $con = mysqli_connect("localhost","root","", $dbname);
+require_once 'config.php';
+$query = "SELECT * FROM users";
+$query2="SELECT* FROM tasks";
+require 'task_func.php';
+$result1 = mysqli_query($con, $query);
+$result2 = mysqli_query($con,$query2);
+$ses_user=$_SESSION['session_user'];
 
-if (mysqli_connect_errno())
-{
-	echo 'error connection ('.mysqli_connect_errno().'):';
-	exit();
-}
+$cat=get_posts($ses_user);
+
 ?>
 
 
@@ -26,35 +32,21 @@ if (mysqli_connect_errno())
   </head>
 
   <body>
-    <section class="list">
-      <div class="container">
-        <div class="list-group">
-          <form class="add-remove-item" onsubmit="return false;">
-            <div class="wrapper-menu">
-              <div class="wrapper-menu__input">
-                <input class="input_add-remove" type="text" />
-              </div>
-              <div class="wrapper-menu__buttons">
-                <button class="button add-item">Добавить задачу</button>
-                <button class="button remove-item">Удалить все задачи</button>
-              </div>
-            </div>
-          </form>
-          <ul class="list-group__items"></ul>
-        </div>
-      </div>
-    </section>
+   <form action="new_task.php" id="tbtb" method="post" name="taskform">
+    <p><label for="task">Введите задачу<br>
+<input class="input" id="task1" name="task1" size="50" type="text"></label></p>
+<input class="button" name="ttt" type= "submit" value="Подтвердить"></p>
+</form>
 
     <script src="./js/app.js"></script>
 
-    <!-- < src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></>
-  < src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></>
-  < src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></> -->
-  </body>
-</html>
+            
+           <?php foreach ($cat as $data):?>
+            
+            <?php echo $data['task'] ?>
+            <form action="delete_task.php" id="loginform" method="post" name="loginform">
+                    <input class="button" id="obra" name= "<?=$data['task']?>" type="submit" style="float: right;" value="Удалить">
+                    <input type="hidden" value="<?=$data['task']?>" name="crd" style="float: left;">
+            </form>
+              
+            <?php endforeach;
